@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>firebase  crub</title>
+    <!-- BOOTSWATCH -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootswatch@4.5.2/dist/pulse/bootstrap.min.css" integrity="sha384-L7+YG8QLqGvxQGffJ6utDKFwmGwtLcCjtwvonVZR/Ba2VzhpMwBz51GaXnUsuYbj" crossorigin="anonymous">
+    <!-- ANIMATE CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+</head>
+<body>
+   <div class="container p-4" >
+       <div class="row">
+           <div class="col-md-6">
+               <div class="card">
+                   <div class="card-body">
+                    <form id="task-form">
+                        <div class="form-group">
+                          <input type="text" id="task-title" class="form control"
+                          placeholder="Titulo De La Tarea" autofocus>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="task-description" cols="30" rows="10" class="form-control" placeholder="Descripcion De La Tarea"></textarea>
+                        </div>
+                        <button class="btn btn-primary" id="btn-task-form"></button>
+                   </div>
+               </div>
+           </div>
+           <div class="col-md-6" id="tasks-container" ></div>
+       </div>
+
+   </div>
+
+
+
+   
+   <!-- FIREBASE configurations-->
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+ 
+  <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-app.js"></script>
+
+  <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+
+<script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-firestore.js"></script>
+
+    <script>
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries 
+ 
+        // llave de sincronizacion de proyecto...
+    
+        const firebaseConfig = {
+  apiKey: "AIzaSyBLq98l2H6NMs3GSPhfXR95D5NV3h5PWy0",
+  authDomain: "fir-prueva-6348f.firebaseapp.com",
+  projectId: "fir-prueva-6348f",
+  storageBucket: "fir-prueva-6348f.appspot.com",
+  messagingSenderId: "551809665551",
+  appId: "1:551809665551:web:662f93ade9599b00a7f17a",
+  measurementId: "G-BQ3KLQM1QQ"
+};
+          
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+      </script>
+
+    
+
+    <script src="index.js"></script>
+</body>
+</html>
